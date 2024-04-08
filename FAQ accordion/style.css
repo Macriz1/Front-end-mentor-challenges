@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Work Sans", sans-serif; 
+    line-height: 1.2;
+    background-image: url(./images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color:  hsl(275, 100%, 97%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    padding: 20px;
+    width: 60%;
+    height: fit-content;
+    background-color: white;
+    
+}
+
+.header{
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.main{
+    font-weight: bold;
+    font-size: larger;
+    color: hsl(292, 42%, 14%);
+    margin-bottom: 30px;
+}
+
+.content{
+    color: grey;
+    font-size: larger;
+    margin-bottom: 30px;
+    display: block;
+    margin-top: 10px;
+    display: none;
+    
+}
+
+.content-show{
+    display: block;
+}
+
+.hide-answer{
+    display: none;
+}
+
+.questions-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.questions-container > ul > li{
+
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: larger;
+    color: hsl(292, 42%, 14%);
+    padding: 20px 10px;
+    border-bottom: 1px solid  rgb(	211, 211, 211, .2);
+    border-top: 1px solid rgb(	211, 211, 211, .2);
+    cursor: pointer;
+    
+}
+
+.test{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: larger;
+    color: hsl(292, 42%, 14%);
+    margin: 20px 0px;
+}
+
+.questions-container > ul > li:hover{
+    color: purple;
+}
+
+.unchecked{
+    position: absolute;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background-image: url(./images/icon-plus.svg);
+    background-size: cover;
+}
+
+.checked{
+    width: 28px;
+    height: 28px;
+    background-image: url(./images/icon-minus.svg);
+    background-size: cover;
+}
+
+@media(max-width: 1100px){
+    .container{
+        width: 80%;
+    }
+}
+
+@media(max-width : 850px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media(max-width : 750px){
+    .questions-container > ul > li{
+        font-size: large;
+     
+       
+    }
+
+}
+
+@media(max-width : 700px){
+    .questions-container > ul > li{
+        font-size: medium;
+        padding-right: 30px;
+
+      
+    }
+
+    .content{
+        font-size: medium;
+    }
+
+}
+
+@media(max-height: 500px){
+    .questions-container > ul > li{
+        font-size: small;
+    }
+}
